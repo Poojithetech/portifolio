@@ -105,10 +105,10 @@ export const Hero = () => {
         // No `loop` — we re-play manually for smooth fade
       />
 
-      {/* Cinematic overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_hsl(var(--background))_85%)] pointer-events-none" />
-      <div className="absolute inset-0 noise-overlay opacity-40 pointer-events-none mix-blend-overlay" />
+      {/* Cinematic overlays — lighter so the video stays clearly visible */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/10 to-background/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_55%,_hsl(var(--background)/0.85)_100%)] pointer-events-none" />
+      <div className="absolute inset-0 noise-overlay opacity-20 pointer-events-none mix-blend-overlay" />
 
       {/* Floating glows */}
       <div className="absolute -top-20 -left-20 w-[420px] h-[420px] blur-grad opacity-60" />
