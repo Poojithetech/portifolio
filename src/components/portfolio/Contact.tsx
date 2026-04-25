@@ -128,14 +128,14 @@ export const Contact = () => {
             </div>
 
             {error && <div className="text-xs text-destructive">{error}</div>}
-            {sent && <div className="text-xs text-accent">Opening your email client…</div>}
+            {sent && <div className="text-xs text-accent">Opening WhatsApp chat…</div>}
 
             <button
               type="submit"
               className="group w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium bg-gradient-to-r from-primary to-accent text-background hover:shadow-[0_0_40px_hsl(var(--primary)/0.6)] transition-all"
             >
-              Send message
-              <Send size={15} className="transition-transform group-hover:translate-x-0.5" />
+              Send via WhatsApp
+              <MessageCircle size={15} className="transition-transform group-hover:translate-x-0.5" />
             </button>
           </form>
         </div>
