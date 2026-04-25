@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, User, Briefcase, FolderGit2, Sparkles, Mail } from "lucide-react";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
+  { href: "#home", label: "Home", icon: Home },
+  { href: "#about", label: "About", icon: User },
+  { href: "#experience", label: "Experience", icon: Briefcase },
+  { href: "#projects", label: "Projects", icon: FolderGit2 },
+  { href: "#skills", label: "Skills", icon: Sparkles },
+  { href: "#contact", label: "Contact", icon: Mail },
 ];
 
 export const Navbar = () => {
@@ -47,8 +47,9 @@ export const Navbar = () => {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full transition-colors hover:bg-foreground/5"
+                  className="group inline-flex items-center gap-1.5 px-3.5 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full transition-all hover:bg-foreground/5"
                 >
+                  <l.icon size={14} className="text-accent-glow opacity-80 group-hover:opacity-100 transition-opacity" />
                   {l.label}
                 </a>
               </li>
@@ -79,8 +80,9 @@ export const Navbar = () => {
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground rounded-xl hover:bg-foreground/5 transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-muted-foreground hover:text-foreground rounded-xl hover:bg-foreground/5 transition-colors"
                   >
+                    <l.icon size={15} className="text-accent-glow" />
                     {l.label}
                   </a>
                 </li>

@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send, MessageCircle } from "lucide-react";
 import { SectionTitle } from "./SectionTitle";
+
+const WHATSAPP_NUMBER = "919390438559"; // +91 93904 38559
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -19,9 +21,8 @@ export const Contact = () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255) return setError("Please enter a valid email.");
     if (!message || message.length > 1000) return setError("Message is required (max 1000 chars).");
 
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:poojimedabayina@gmail.com?subject=${subject}&body=${body}`;
+    const text = `Hi Poojitha, I'm ${name} (${email}).%0A%0A${encodeURIComponent(message)}`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
     setSent(true);
   };
 
@@ -127,14 +128,14 @@ export const Contact = () => {
             </div>
 
             {error && <div className="text-xs text-destructive">{error}</div>}
-            {sent && <div className="text-xs text-accent">Opening your email client…</div>}
+            {sent && <div className="text-xs text-accent">Opening WhatsApp chat…</div>}
 
             <button
               type="submit"
               className="group w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium bg-gradient-to-r from-primary to-accent text-background hover:shadow-[0_0_40px_hsl(var(--primary)/0.6)] transition-all"
             >
-              Send message
-              <Send size={15} className="transition-transform group-hover:translate-x-0.5" />
+              Send via WhatsApp
+              <MessageCircle size={15} className="transition-transform group-hover:translate-x-0.5" />
             </button>
           </form>
         </div>
