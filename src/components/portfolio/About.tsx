@@ -18,8 +18,8 @@ export const About = () => (
         subtitle="I sit at the intersection of data and design — extracting insight from numbers and translating ideas into experiences people remember."
       />
 
-      <div className="grid md:grid-cols-5 gap-6 reveal">
-        <div className="md:col-span-2 glass gradient-border rounded-3xl p-8 relative overflow-hidden">
+      <div className="grid md:grid-cols-5 gap-6">
+        <div className="md:col-span-2 glass gradient-border rounded-3xl p-8 relative overflow-hidden reveal-left">
           <div className="absolute -top-20 -right-20 w-60 h-60 blur-grad opacity-50" />
 
           {/* Portrait */}
@@ -41,14 +41,14 @@ export const About = () => (
           <p className="mt-5 text-muted-foreground text-sm leading-relaxed text-center">
             Based in Visakhapatnam, I've spent the last few years going deep on both ends of the modern web: the data that powers decisions, and the interfaces that turn those decisions into action. From training deep learning models to delivering 49+ websites for real clients, I bring a rare full-spectrum perspective.
           </p>
-          <div className="mt-6 flex flex-wrap gap-2 justify-center">
+          <div className="mt-6 flex flex-wrap gap-2 justify-center stagger-reveal">
             {["Data Science", "ML / DL", "React", "Full Stack", "SEO"].map((t) => (
               <span key={t} className="text-xs px-3 py-1 rounded-full glass text-foreground/80">{t}</span>
             ))}
           </div>
         </div>
 
-        <div className="md:col-span-3 grid sm:grid-cols-2 gap-5">
+        <div className="md:col-span-3 grid sm:grid-cols-2 gap-5 stagger-reveal reveal-right">
           {highlights.map((h) => (
             <div key={h.label} className="glass rounded-2xl p-6 glow-hover relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

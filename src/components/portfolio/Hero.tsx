@@ -93,55 +93,54 @@ export const Hero = () => {
       id="home"
       className="relative min-h-screen w-full overflow-hidden flex items-center justify-center"
     >
-      {/* Background video */}
+      {/* Background video - Only show in dark mode */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover translate-y-[17%] pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover translate-y-[17%] pointer-events-none hidden dark:block"
         src={VIDEO_URL}
         muted
         playsInline
         autoPlay
         preload="auto"
-        // No `loop` — we re-play manually for smooth fade
       />
 
-      {/* Cinematic overlays — lighter so the video stays clearly visible */}
+      {/* Cinematic overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/10 to-background/80 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_55%,_hsl(var(--background)/0.85)_100%)] pointer-events-none" />
-      <div className="absolute inset-0 noise-overlay opacity-20 pointer-events-none mix-blend-overlay" />
+      <div className="absolute inset-0 noise-overlay opacity-[0.03] dark:opacity-20 pointer-events-none mix-blend-overlay" />
 
       {/* Floating glows */}
-      <div className="absolute -top-20 -left-20 w-[420px] h-[420px] blur-grad opacity-60" />
+      <div className="absolute -top-20 -left-20 w-[420px] h-[420px] blur-grad opacity-20 dark:opacity-60" />
       <div
-        className="absolute -bottom-32 -right-20 w-[460px] h-[460px] blur-grad opacity-50"
+        className="absolute -bottom-32 -right-20 w-[460px] h-[460px] blur-grad opacity-10 dark:opacity-50"
         style={{ background: "radial-gradient(circle, hsl(var(--accent) / 0.6), transparent 70%)" }}
       />
 
       {/* Content */}
       <div className="relative z-10 container px-6 pt-32 pb-20 text-center max-w-5xl">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs tracking-wide text-foreground/80 mb-8 animate-fade-in">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs tracking-wide text-foreground/80 mb-8 reveal-scale">
           <Sparkles size={14} className="text-accent-glow" />
           Available for freelance & collaborations
         </div>
 
-        <h1 className="font-serif text-[clamp(2.5rem,7vw,5.75rem)] leading-[1.02] tracking-tight animate-fade-in">
-          <span className="block text-foreground/95">Turning Data into</span>
+        <h1 className="font-serif text-[clamp(2.5rem,7vw,5.75rem)] leading-[1.02] tracking-tight">
+          <span className="block text-foreground dark:text-foreground/95">Turning Data into</span>
           <span className="block">
             <span className="text-gradient italic">Decisions</span>
-            <span className="text-foreground/80"> & Ideas into </span>
+            <span className="text-foreground dark:text-foreground/80"> & Ideas into </span>
             <span className="text-gradient-accent italic">Websites</span>
           </span>
         </h1>
 
-        <p className="mt-7 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "120ms" }}>
+        <p className="mt-7 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto reveal" style={{ transitionDelay: "200ms" }}>
           Data Science Graduate · Full Stack Developer · 49+ Websites Delivered
         </p>
 
         {/* Glass input + CTA */}
         <form
           onSubmit={onSubscribe}
-          className="mt-10 mx-auto max-w-xl glass rounded-full p-1.5 flex items-center gap-1.5 animate-scale-in"
-          style={{ animationDelay: "240ms" }}
+          className="mt-10 mx-auto max-w-xl glass rounded-full p-1.5 flex items-center gap-1.5 reveal-scale"
+          style={{ transitionDelay: "400ms" }}
         >
           <input
             type="email"
@@ -161,9 +160,9 @@ export const Hero = () => {
         </form>
 
         {/* Socials */}
-        <div className="mt-8 flex items-center justify-center gap-3 animate-fade-in" style={{ animationDelay: "360ms" }}>
+        <div className="mt-8 flex items-center justify-center gap-3 reveal" style={{ transitionDelay: "600ms" }}>
           <a
-            href="https://github.com/"
+            href="https://github.com/poojimedabayina"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
@@ -172,7 +171,7 @@ export const Hero = () => {
             <Github size={18} />
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://linkedin.com/in/poojithamedabayina"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"

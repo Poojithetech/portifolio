@@ -12,6 +12,8 @@ import { Extras } from "@/components/portfolio/Extras";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 
+import { FloatingSocials } from "@/components/portfolio/FloatingSocials";
+
 const Index = () => {
   useReveal();
   return (
@@ -28,6 +30,7 @@ const Index = () => {
       <Extras />
       <Contact />
       <Footer />
+      <FloatingSocials />
     </main>
   );
 };

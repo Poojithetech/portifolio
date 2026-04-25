@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Home, User, Briefcase, FolderGit2, Sparkles, Mail } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#home", label: "Home", icon: Home },
@@ -30,7 +31,7 @@ export const Navbar = () => {
       <nav className="container">
         <div
           className={`glass rounded-full px-5 md:px-7 py-3 flex items-center justify-between transition-all duration-500 ${
-            scrolled ? "shadow-[0_10px_40px_-10px_hsl(270_80%_30%/0.4)]" : ""
+            scrolled ? "shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.3)]" : ""
           }`}
         >
           <a href="#home" className="flex items-center gap-2 group">
@@ -56,20 +57,26 @@ export const Navbar = () => {
             ))}
           </ul>
 
-          <a
-            href="#contact"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-primary to-accent text-background hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-shadow"
-          >
-            Let's talk
-          </a>
+          <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-primary to-accent text-background hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-shadow"
+            >
+              Let's talk
+            </a>
+          </div>
 
-          <button
-            aria-label="Toggle menu"
-            className="md:hidden p-2 text-foreground/80 hover:text-foreground"
-            onClick={() => setOpen((s) => !s)}
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle />
+            <button
+              aria-label="Toggle menu"
+              className="p-2 text-foreground/80 hover:text-foreground"
+              onClick={() => setOpen((s) => !s)}
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
 
         {open && (
