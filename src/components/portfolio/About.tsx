@@ -5,7 +5,7 @@ import poojithaImg from "@/assets/poojitha.png";
 const highlights = [
   { icon: GraduationCap, label: "Data Science Graduate", desc: "BSc in Data Science with strong foundations in ML, statistics & analytics." },
   { icon: Code2, label: "Full Stack Developer", desc: "React, Vite, Node — shipping production-grade, conversion-focused websites." },
-  { icon: Briefcase, label: "Intern @ Staffarc", desc: "Joined Feb 19, 2026 — building real client projects end-to-end." },
+  { icon: Briefcase, label: "Trainee @ LTI Mindtree", desc: "Joined May 20, 2026 (under Cis Multitech) for enterprise technology training." },
   { icon: Sparkles, label: "49+ Websites Delivered", desc: "Across e-commerce, healthcare, travel, AI & corporate verticals." },
 ];
 
