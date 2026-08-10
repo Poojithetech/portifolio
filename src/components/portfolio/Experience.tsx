@@ -3,31 +3,31 @@ import { SectionTitle } from "./SectionTitle";
 
 const experiences = [
   {
-    title: "Associate Trainee",
-    company: "LTI Mindtree",
-    group: "Cis Multitech",
+    title: "Associate Trainee – EUC Client Engineering",
+    company: "LTM Limited",
+    group: "Cloud & Infrastructure",
     period: "May 20, 2026 · Present",
     status: "current",
     description:
-      "Joined LTI Mindtree for enterprise technology training under Cis Multitech, working across collaborative workflows, internal tooling, and skill-building projects.",
+      "Joined LTM Limited as an Associate Trainee in Cloud & Infrastructure. Completed CIS Multitech training covering Windows, Azure, PowerShell, DevOps, ITIL, and Networking, and currently working in End User Computing (EUC) in Hyderabad.",
     points: [
-      "Enterprise onboarding and hands-on integration with Agile squads.",
-      "Training on collaborative workflows, version control, and deployment pipelines.",
-      "Building polished proof-of-concept experiences with premium UI touches.",
+      "Completed CIS Multitech training across Windows, Azure, PowerShell, DevOps, ITIL, and Networking.",
+      "Currently working in EUC Client Engineering with exposure to Microsoft 365, VDI, Intune, SCCM, Image Management, Application Packaging, and DEX.",
+      "Building knowledge of enterprise endpoint management, virtual desktop environments, application deployment, and client engineering technologies.",
     ],
   },
   {
     title: "Web Development Intern",
-    company: "Staffarc",
-    group: "Web Development Internship",
-    period: "Feb 19, 2026 · May 19, 2026",
+    company: "StaffArc",
+    group: "Full Stack Development",
+    period: "Jan 19, 2026 · Apr 20, 2026",
     status: "completed",
     description:
-      "Completed a 3-month internship at Staffarc, delivering end-to-end web solutions for real clients while combining frontend craftsmanship with deployment-ready performance and SEO-focused execution.",
+      "Completed an on-site Full Stack Development internship at StaffArc, gaining practical exposure to IT and full-stack website development.",
     points: [
-      "Built production websites for live client launches.",
-      "Implemented responsive, accessible interfaces with strong UX polish.",
-      "Optimized performance, SEO, and developer workflows from design to deployment.",
+      "Completed a structured internship in Full Stack Development.",
+      "Worked on assigned projects and responsibilities related to IT and full-stack website development.",
+      "Gained practical exposure to web development and software development practices.",
     ],
   },
 ];
